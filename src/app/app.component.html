@@ -3,14 +3,28 @@
   <img 
   src="https://lh3.googleusercontent.com/G5oF0mhpOcQzFTrU6TDUL0JoAjzRt38weiZKua7L61WVT1z3dPcE9gUu-W2EwtM9cZU"
   alt="Lco Logo"
-  width="200"
-  heigth="200" 
+  width="100"
+  heigth="100" 
   class='logo'
   >
-  <h1 class='app-title'>TO DO Lists:</h1>
+  <h1>TO DO Lists:</h1>
 </div>
 <div>
-  <input type="text" placeholder="Enter Input Here!" class="input-text"/>
-  <button class="add-btn">Add Button!</button>
+  <input 
+  type="text" 
+  placeholder="Add to To Do List!" 
+  class="input-text"
+  (keyup.enter)="addItem()"
+  [(ngModel)]="todoValue"
+  />
+  <button class="add-btn" (click)="addItem()">Add Button!</button>
+<ul>
+  <li *ngFor="'et it of list'"
+    <input type="checkbox" name="isDone"
+    [(ngModel)}="item.isDone"/>
+    <button class="btn" (click)="deletItem(item.id)">Delete</button>
+    {{item.value}}</li>
+  
+</ul>
 </div>
 </div>
