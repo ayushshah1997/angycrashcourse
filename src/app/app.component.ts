@@ -8,7 +8,5 @@ import { Component, VERSION } from "@angular/core";
 export class AppComponent {
   name = "Angular " + VERSION.major;
   me: string = "Ayush Shah";
-  constructor(){
-    console.log('contstructed');
-  }
+  
 }
